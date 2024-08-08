@@ -87,7 +87,15 @@ The API server will be available at http://localhost:3000.
 
 
 ### Get Trips
+This action will return list of trips and trip versions which are related to(Assignee or Owner) LoggedIn User.
 - Endpoint: `GET /api/v1/trips`
+- Headers:
+    - Authorization: `Bearer <jwt_token}>`
+- Authentication Required: Yes
+
+### Get Trip Versions
+This action will return list versions in a given trip where logged In user is Owner or Assignee.
+- Endpoint: `GET /api/v1/trips/:id/trip_versions`
 - Headers:
     - Authorization: `Bearer <jwt_token}>`
 - Authentication Required: Yes
